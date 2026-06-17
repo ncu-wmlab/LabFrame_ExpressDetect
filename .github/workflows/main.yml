@@ -1,0 +1,40 @@
+name: Push to npm
+ 
+on:
+  push: 
+    branches:
+      - master
+      - main
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - name: Prepare publish folder
+        run: |
+          rm -rf dist
+          mkdir -p dist
+
+          cp package.json dist/package.json
+          cp *.asmdef dist/ || true
+          cp -r Editor dist/ || true
+          cp -r Scripts dist/ || true
+          cp -r Resources dist/ || true
+
+          find dist -name "*.meta" -type f -delete
+
+      - name: Verify publish content
+        working-directory: ./dist
+        run: npm pack --dry-run
+
+      - name: Publish to npm
+        working-directory: ./dist
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
