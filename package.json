@@ -1,6 +1,6 @@
 {
     "name": "com.xrlab.labframe_expressiondetect",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "LabFrame_ExpressionDetect",
     "description": "NCU WMLABxXRLAB (Lab317/318)\nLab Frame 2023",
     "unity": "2022.3",
