@@ -1,0 +1,27 @@
+{
+    "name": "com.xrlab.labframe_expressiondetect",
+    "version": "1.0.0",
+    "displayName": "LabFrame_ExpressionDetect",
+    "description": "NCU WMLABxXRLAB (Lab317/318)\nLab Frame 2023",
+    "unity": "2022.3",
+    "unityRelease": "11f1",
+    "documentationUrl": "https://github.com/ncu-wmlab/LabFrame2023",
+    "changelogUrl": "https://github.com/ncu-wmlab/LabFrame2023",
+    "licensesUrl": "https://youtu.be/dQw4w9WgXcQ",
+    "dependencies":{
+      "com.unity.nuget.newtonsoft-json": "3.0.2"
+    },
+    "author": {
+      "name": "NCU wmlab & xrlab",
+      "email": "wmlabwmlab@gmail.com",
+      "url": "https://staff.csie.ncu.edu.tw/shihchingyeh/index2.html"
+    },
+    "samples": [
+      {
+        "displayName": "",
+        "description": "",
+        "path": ""
+      }
+    ]
+}
+  
